@@ -1,0 +1,16 @@
+{
+  "name": "gluesp",
+  "version": "1.0.0",
+  "description": "website with focus in indexacion",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fabioGuelfi",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "path": "^0.12.7"
+  }
+}
