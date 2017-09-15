@@ -1,0 +1,156 @@
+<!-- INICIO FORMULARIO -->
+
+<form action="NODEMAILERCREATE" method="post" class="wpcf7-form">
+	<!-- NOME -->
+    <p>
+		<span class="wpcf7-form-control-wrap">
+			<input name="nome" size="40" class="campo" placeholder="Nome" required/>
+		</span>
+    </p>
+	<!-- EMAIL -->
+    <p>
+		<span class="wpcf7-form-control-wrap">
+			<input type="email" name="email" size="40" class="campo" placeholder="E-mail" required/>
+		</span>
+    </p>
+
+	<p class="telefones">
+		<!-- TELEFONES -->
+
+			<!-- DDD -->
+		<span class="wpcf7-form-control-wrap">
+			<input name="dddres" size="40" maxlength="2" class="ddd" placeholder="DDD" required/>
+		</span>
+			<!-- TEL -->
+        <span class="wpcf7-form-control-wrap">
+			<input name="telres" size="40" maxlength="9" class="campo-tel" placeholder="Tel. Res." required/>
+		</span>
+
+			<!-- DDD COM -->
+        <span class="wpcf7-form-control-wrap">
+		<input name="dddcom" size="40" maxlength="2" class="ddd" placeholder="DDD" required/>
+		</span>
+			<!-- TEL COM -->
+        <span class="wpcf7-form-control-wrap">
+		<input name="telcom" size="40" maxlength="9" class="campo-tel" placeholder="Tel. Com." required/>
+		</span>
+
+		<!-- DDD CEL -->
+        <span class="dddcel">
+		<input name="dddcel" size="40" maxlength="2" class="ddd" placeholder="DDD" required/>
+		</span>
+		<!-- TEL CEL -->
+        <span class="wpcf7-form-control-wrap">
+		<input name="cel" size="40" maxlength="10" class="campo-tel" placeholder="Tel. Cel." required/>
+		</span>
+	</p>
+
+    <div class="campos-meio">
+        <p>
+			<!-- CEP -->
+			<span class="wpcf7-form-control-wrap">
+				<input name="cep" size="40" maxlength="9" class="campo-meio" placeholder="CEP" required/>
+			</span>
+			<!-- NASCIMENTO -->
+			<span class="wpcf7-form-control-wrap">
+				<input type="date" name="nasc" class="campo-meio" required/>
+			</span>
+		</p>
+
+        <p>
+			<!-- ESTADO CIVIL -->
+			<span class="wpcf7-form-control-wrap">
+				<select name="estcivil" class="campo-meio" required>
+					<option value="">Estado Civil</option>
+					<option value="Solteiro (a)">Solteiro (a)</option>
+					<option value="Casado (a)">Casado (a)</option>
+					<option value="Divorciado (a)">Divorciado (a)</option>
+					<option value="Viúvo (a)">Viúvo (a)</option>
+					<option value="Separado (a)">Separado (a)</option>
+					<option value="Companheiro (a)">Companheiro (a)</option>
+				</select>
+			</span>
+
+			<!-- ESCOLARIDADE -->
+			<span class="wpcf7-form-control-wrap">
+				<input name="esc" size="40" class="campo-meio" placeholder="Escolaridade" required/>
+			</span>
+		</p>
+
+        <p>
+			<!-- PROFISSAO -->
+			<span class="wpcf7-form-control-wrap">
+				<input name="prof" size="40" class="campo-meio" placeholder="Profissão" required/>
+			</span>
+
+			<!-- RELIGIAO -->
+			<span class="wpcf7-form-control-wrap">
+				<input name="rel" size="40" class="campo-meio" placeholder="Religião" required/>
+			</span>
+		</p>
+    </div>
+	<!-- É MAÇOM ? -->
+	<p class="campo-radio">É maçom?
+			<span class="wpcf7-form-control-wrap">
+				<span class="campo-meio">
+					<span class="wpcf7-list-item first">
+						<label>
+							<input type="radio" name="macom" value="sim" required/>&nbsp;
+							<span class="wpcf7-list-item-label">Sim</span>
+						</label>
+					</span>
+
+					<span class="wpcf7-list-item last">
+						<label>
+							<input type="radio" required name="macom" value="não"/>&nbsp;
+							<span class="wpcf7-list-item-label">Não</span>
+						</label>
+					</span>
+				</span>
+			</span>
+	</p>
+
+	<!-- CRÊ EM DEUS ? -->
+	<p class="campo-radio">Crê em Deus?
+		<span class="wpcf7-form-control-wrap">
+				<span class="campo-meio">
+					<span class="wpcf7-list-item first">
+						<label>
+							<input type="radio" name="deus" value="sim" required/>&nbsp;
+							<span class="wpcf7-list-item-label">Sim</span>
+						</label>
+					</span>
+
+					<span class="wpcf7-list-item last">
+						<label>
+							<input type="radio" required name="deus" value="não"/>&nbsp;
+							<span class="wpcf7-list-item-label">Não</span>
+						</label>
+					</span>
+				</span>
+			</span>
+	</p>
+
+	<!-- PORQUE QUER SE AFILIAR ? -->
+	<div style="clear:both"></div>
+    <p>Por que deseja se afiliar?</p>
+    <p>
+		<span class="wpcf7-form-control-wrap">
+			<textarea name="msg" cols="40" rows="10" class="campo-txt" required></textarea>
+		</span>
+	</p>
+
+    <p>
+		<span class="wpcf7-form-control-wrap">
+			<input type="checkbox" name="aceito" value="1" required/>
+		</span>
+        <label for="aceitar">Eu estou ciente de que o simples preenchimento deste formulário não me garante o ingresso à Ordem Maçônica, servindo apenas como apresentação.</label>
+	</p>
+
+	<!-- BUTTON SUBMIT -->
+	<p>
+        <input type="submit" value="Enviar" class="wpcf7-submit botao"/>
+	</p>
+
+</form>
+<!-- FIM FORMULARIO -->
