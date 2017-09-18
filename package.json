@@ -11,6 +11,5 @@
   "dependencies": {
     "ejs": "^2.5.7",
     "express": "^4.15.4",
-    "path": "^0.12.7"
   }
 }
