@@ -4,9 +4,14 @@
 const debug = require('debug')('gluesp:config:mongo');
 const mongojs = require('mongojs');
 
-let database = process.env.NODE_ENV == 'test' ? 'gluesp-test' : 'gluesp'
+//let database = process.env.NODE_ENV == 'test' ? 'gluesp-test' : 'gluesp'
 // usar crase
-let db = mongojs(`172.16.105.134:27017/${database}`);
+//let db = mongojs(`172.16.105.134:27017/${database}`);
+
+let database = process.env.NODE_ENV == 'test' ? 'gluesp-test' : 'gluesp01'
+// usar crase
+let db = mongojs(`gluesp01:math2017@mongodb.gluesp.kinghost.net:27017/${database}`);
+
 
 module.exports = db;
 
