@@ -1,6 +1,6 @@
-module.exports = function(app) {
+module.exports = (app) => {
     // COMO ENTRAR NA MAÇONARIA
-    app.get("/como-entrar-maconaria",function(req, res) {
+    app.get("/como-entrar-maconaria",(req, res) =>{
         res.render('base-site/keywords/como-entrar-maconaria', {
             //Per page
             title :'Como entrar na Maçonaria',
@@ -22,7 +22,7 @@ module.exports = function(app) {
     });
 
     // COMO SER MACOM
-    app.get("/como-ser-macom", function (req, res) {
+    app.get("/como-ser-macom",  (req, res) => {
         res.render("base-site/keywords/como-ser-macom", {
             //Per page
             title :'Como ser Maçom',

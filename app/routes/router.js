@@ -1,6 +1,6 @@
-module.exports = function(app) {
-    // INDEX
-    app.get("/",function(req, res) {
+module.exports = (app) => {
+    // INDEX: us need create one form to use this variables globals, no send more for json in router
+    app.get("/",(req, res) => {
         res.render('base-site/index', {
             //Per page
             title :'Gluesp',
@@ -22,7 +22,7 @@ module.exports = function(app) {
     });
 
     // INSTITUTO
-    app.get("/instituto",function(req, res) {
+    app.get("/instituto",(req, res) => {
         res.render('base-site/instituto', {
             //Per page
             //Per page
@@ -46,7 +46,7 @@ module.exports = function(app) {
     });
 
     // PORQUE-SER-MACOM
-    app.get("/porque-ser-macom",function(req, res) {
+    app.get("/porque-ser-macom",(req, res) => {
         res.render('base-site/porque-ser-macom', {
             //Per page
             title :'Por que ser Maçom?',
@@ -69,7 +69,7 @@ module.exports = function(app) {
     });
 
     // MAPA-SITE
-    app.get("/mapa-site",function(req, res) {
+    app.get("/mapa-site",(req, res) => {
         res.render('base-site/mapa-site', {
             //Per page
             title :'Mapa do Site',
