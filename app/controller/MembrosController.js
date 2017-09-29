@@ -1,54 +1,50 @@
-// app/controller/MembrosController.js
+/* app/controller/MembrosController.js */
 'use strict'
 
 const bluebird = require('bluebird');
-
 const model = bluebird.promisifyAll(require('../model/MembrosModel'));
-
 const debug = require('debug')('gluesp:controller:membros');
 
 let MembrosController = {
-
-  list: function(request, response, next) {
+  list: (request, response, next) => {
     let query = {};
-    if(request.query.name) {
+    if (request.query.name) {
       query.name = new RegExp(request.query.name, 'i');
     }
     model.findAsync(query, request.query.page)
       .then(data => response.json(data))
       .catch(next);
   },
-  byId: function(request, response, next) {
+  byId: (request, response, next) => {
     let id = request.params.id;
     model.findOneAsync({ _id: id })
-      .then( (data) => {
+      .then((data) => {
         response.json(data);
       })
-        .catch(next);
-  },
-  create: function(request, response, next) {
-    let body = request.body;
-    model.insertAsync(body)
-      .then( data => response.status(201).json(data))
       .catch(next);
   },
-  update: function(request, response, next) {
+  create: (request, response, next) => {
+    let body = request.body;
+    model.insertAsync(body)
+      .then(data => response.status(201).json(data))
+      .catch(next);
+  },
+  update: (request, response, next) => {
     let id = request.params.id;
     let body = request.body;
-
-    //delete body._id;
+    /* delete body._id << nao entendi o comment, apagar dps */
 
     model.update({ _id: id }, body, (err, data) => {
-      if(err) {
+      if (err) {
         return next(err);
       }
       response.json(data);
     })
   },
-  delete: function(request, response, next) {
+  delete: (request, response, next) => {
     let id = request.params.id;
     model.remove({ _id: id }, (err, data) => {
-      if(err) {
+      if (err) {
         return next(err);
       }
       if (data.n > 0) {

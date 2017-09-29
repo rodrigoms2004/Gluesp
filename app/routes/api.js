@@ -1,18 +1,17 @@
-// app/routes/api.js
-
+/* app/routes/api.js */
 'use strict'
 
 const router = require('express').Router();
 const MembrosController = require('../controller/MembrosController');
 
-// middleware para validar o id
-function validatedId(request, response, next) {
+/* middleware para validar o id */
+validatedId: (request, response, next) => {
   let id = request.params.id;
-  if (/^[0-9a-z]{24}$/.test(id)) { // /^[0-9a-z]i$/ i desativa o case sensitive
+  if (/^[0-9a-z]{24}$/.test(id)) { /* /^[0-9a-z]i$/ i desativa o case sensitive */
     return next();
   }
   let err = new Error('invalid id');
-  err.status = 422; // unprocessable error
+  err.status = 422; /* unprocessable error */
   next(err);
 }
 
