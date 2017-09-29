@@ -10,7 +10,7 @@ const debug = require('debug')('gluesp:server:app');
 
 /* all stay in Public is free to shared */
 global.APP_ROOT = require('path').join(__dirname);
-app.use(express.static(APP_ROOT + '/public'));S
+app.use(express.static(APP_ROOT + '/public'));
 
 /* parser json */
 app.use(bodyParser.json());
